@@ -1,0 +1,4 @@
+../Core/Src/motor_driver.cpp:10:6:void enable(motor_drv_t*)	16	static
+../Core/Src/motor_driver.cpp:15:6:void disable(motor_drv_t*)	16	static
+../Core/Src/motor_driver.cpp:20:6:void scaleNewPulse(motor_drv_t*, int8_t)	16	static
+../Core/Src/motor_driver.cpp:24:6:void setPWM(motor_drv_t*)	24	static

@@ -1,0 +1,5 @@
+servo_driver.cpp:7:1:Servo::Servo(TIM_HandleTypeDef*, uint32_t, TIM_HandleTypeDef*)	1
+servo_driver.cpp:11:6:void Servo::initialize()	1
+servo_driver.cpp:24:6:void Servo::setAngle(uint32_t)	5
+servo_driver.cpp:39:6:void Servo::startTimer()	1
+servo_driver.cpp:43:7:float Servo::elapsedTime()	1

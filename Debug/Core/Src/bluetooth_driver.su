@@ -1,0 +1,2 @@
+../Core/Src/bluetooth_driver.cpp:11:6:void updateStatus(blue_drv_t*)	16	static
+../Core/Src/bluetooth_driver.cpp:20:6:void print_Blue(blue_drv_t*, UART_HandleTypeDef*)	72	static

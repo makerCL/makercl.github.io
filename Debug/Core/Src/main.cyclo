@@ -1,0 +1,25 @@
+main.cpp:108:6:void SORT_TASK(APDS9960&, Servo&)	10
+main.cpp:162:6:void MOTOR_TASK(motor_drv_t*, motor_drv_t*, UART_HandleTypeDef*)	1
+main.cpp:168:6:void CORRAL_TASK(Servo&)	3
+main.cpp:177:6:void MASTERMIND_TASK(Servo&)	3
+main.cpp:197:5:int main()	1
+main.cpp:282:6:void SystemClock_Config()	3
+main.cpp:329:13:void MX_ADC1_Init()	3
+main.cpp:381:13:void MX_I2C1_Init()	2
+main.cpp:415:13:void MX_TIM1_Init()	6
+main.cpp:484:13:void MX_TIM2_Init()	5
+main.cpp:537:13:void MX_TIM3_Init()	5
+main.cpp:590:13:void MX_TIM4_Init()	5
+main.cpp:643:13:void MX_TIM5_Init()	4
+main.cpp:688:13:void MX_TIM10_Init()	2
+main.cpp:719:13:void MX_USART1_UART_Init()	2
+main.cpp:752:13:void MX_USART6_UART_Init()	2
+main.cpp:785:13:void MX_GPIO_Init()	1
+main.cpp:823:6:void usrprint(const char*)	2
+main.cpp:835:6:void usrprint(uint32_t)	1
+main.cpp:844:6:void HAL_UART_RxCpltCallback(UART_HandleTypeDef*)	3
+main.cpp:856:6:void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef*)	6
+main.cpp:875:6:void HAL_GPIO_EXTI_Callback(uint16_t)	6
+main.cpp:977:6:void Error_Handler()	1
+main.cpp:986:1:void __static_initialization_and_destruction_0(int, int)	3
+main.cpp:986:1:cpp)	1

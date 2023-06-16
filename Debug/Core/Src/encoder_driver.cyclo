@@ -1,0 +1,5 @@
+encoder_driver.cpp:11:15:encoder_drv_t init_encoder(uint16_t, GPIO_TypeDef*, uint16_t, GPIO_TypeDef*, TIM_HandleTypeDef*, int32_t)	1
+encoder_driver.cpp:18:6:void update_encoder(encoder_drv_t*)	7
+encoder_driver.cpp:32:6:void Update_Encoder_State(encoder_drv_t*)	1
+encoder_driver.cpp:41:6:void zero(encoder_drv_t*)	1
+encoder_driver.cpp:48:9:uint8_t NewState(encoder_drv_t*)	2
