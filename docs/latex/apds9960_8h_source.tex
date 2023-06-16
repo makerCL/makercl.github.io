@@ -1,0 +1,51 @@
+\doxysection{apds9960.\+h}
+\hypertarget{apds9960_8h_source}{}\label{apds9960_8h_source}\index{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/apds9960.h@{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/apds9960.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ APDS9960\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ APDS9960\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_p_d_s9960}{APDS9960}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{class_a_p_d_s9960}{APDS9960}}(I2C\_HandleTypeDef*\ i2cHandle,\ UART\_HandleTypeDef*\ uartHandle,\ uint16\_t\ ATIME);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{char}\ ball\_color[13];}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_a_p_d_s9960_a179e041fe02bfac073c4a53ad2c607e8}{initialize}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_p_d_s9960_a131476462b3506e5d5b4158dd9d05cd2}{readRGBC}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_p_d_s9960_a77335775110bea5d503f0289b806cba2}{ballDetect}}();}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_a_p_d_s9960_ad89d2fcf3a6b4ec6cc04dbda02076a2f}{colorSort}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_p_d_s9960_a5ffde42bc3386c9e242778d249714c21}{colorSet}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint8\_t\ APDS9960\_I2C\_ADDR\ =\ 0x72;}
+\DoxyCodeLine{00025\ \ \ \ \ uint16\_t\ RGBC\_Buffer[4]\ =\ \{0,\ 0,\ 0,\ 0\};\ \textcolor{comment}{//\ RGBC\ values\ from\ sensor}}
+\DoxyCodeLine{00026\ \ \ \ \ uint16\_t\ RGBC\_Select[4]\ =\ \{0,\ 0,\ 0,\ 0\};\ \textcolor{comment}{//\ RGB\ Values\ of\ ball\ to\ collect}}
+\DoxyCodeLine{00027\ \ \ \ \ uint8\_t\ RGB\_Margin;}
+\DoxyCodeLine{00028\ \ \ \ \ uint16\_t\ ATIME;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ uint8\_t\ \mbox{\hyperlink{class_a_p_d_s9960_a0ff1afed004110e46dbc6aa0e86c5823}{readReg}}(uint8\_t\ reg);}
+\DoxyCodeLine{00032\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{class_a_p_d_s9960_a2789db95440452303622ad469b1cbb46}{readReg16}}(uint8\_t\ reg);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_p_d_s9960_ac16182c267cf2e49afe23f11f145228e}{writeReg}}(uint8\_t\ reg,\ uint8\_t\ value);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_p_d_s9960_af3546339e900dfcd92d8afe5cddfad6e}{printRGBCBuffer}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ I2C\_HandleTypeDef*\ hi2c;}
+\DoxyCodeLine{00041\ \ \ \ \ UART\_HandleTypeDef*\ huart;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,39 @@
+\doxysection{servo\+\_\+driver.\+h}
+\hypertarget{servo__driver_8h_source}{}\label{servo__driver_8h_source}\index{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/servo\_driver.h@{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/servo\_driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SERVO\_DRIVER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SERVO\_DRIVER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_servo}{Servo}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \mbox{\hyperlink{class_servo}{Servo}}(TIM\_HandleTypeDef*\ PWMHandle,\ uint32\_t\ channel);}
+\DoxyCodeLine{00011\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servo_ab220ecf228ea7b008227f21a64f06024}{initialize}}();}
+\DoxyCodeLine{00012\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servo_a92f16edba5d71a28c9c2e4c6c5a85d8b}{setAngle}}(uint32\_t\ position\_deg,\ uint16\_t\ delay);}
+\DoxyCodeLine{00013\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servo_a57e27f3e31877fda1cd1cfdc51f9ffd7}{update\_servo\_flag}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \textcolor{keywordtype}{float}\ min\_pulse\ =\ 0.5;\ \textcolor{comment}{//ms}}
+\DoxyCodeLine{00016\ \ \ \textcolor{keywordtype}{float}\ max\_pulse\ =\ 2.5;\ \textcolor{comment}{//ms}}
+\DoxyCodeLine{00017\ \ \ uint16\_t\ max\_rot\ =\ 180;\ \textcolor{comment}{//degrees}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ uint16\_t\ flag;\ \textcolor{comment}{//\ used\ to\ indicate\ if\ servo\ is\ in\ motion}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_servo_aac6ead4264d2a4321ddf25e31f812b48}{startTimer}}(uint16\_t\ delay);}
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordtype}{float}\ elapsedTime();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00025\ \ \ TIM\_HandleTypeDef*\ htim;}
+\DoxyCodeLine{00026\ \ \ uint32\_t\ timer\_channel;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \textcolor{comment}{//uint32\_t\ start\_time;}}
+\DoxyCodeLine{00030\ \};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

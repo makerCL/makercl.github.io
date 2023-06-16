@@ -1,0 +1,30 @@
+\doxysection{line\+\_\+driver.\+h}
+\hypertarget{line__driver_8h_source}{}\label{line__driver_8h_source}\index{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/line\_driver.h@{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/line\_driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ line\_driver.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ May\ 31,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ johna}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_LINE\_DRIVER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_LINE\_DRIVER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structline__drv}{line\_drv}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ state;}
+\DoxyCodeLine{00016\ \ \ \ \ GPIO\_TypeDef*\ \ \ \ \ \ \ GPIOx;}
+\DoxyCodeLine{00017\ \ \ \ \ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ GPIO\_Pin;}
+\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{structline__drv}{line\_drv\_t}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ update\_Line(\mbox{\hyperlink{structline__drv}{line\_drv\_t}}*\ \mbox{\hyperlink{structline__drv}{line\_drv}});}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ print\_LineF(\mbox{\hyperlink{structline__drv}{line\_drv\_t}}*\ \mbox{\hyperlink{structline__drv}{line\_drv}},\ UART\_HandleTypeDef*\ huart);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_LINE\_DRIVER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

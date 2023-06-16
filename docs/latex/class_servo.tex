@@ -1,0 +1,117 @@
+\doxysection{Servo Class Reference}
+\hypertarget{class_servo}{}\label{class_servo}\index{Servo@{Servo}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_servo_a90cd628aa942214457b8c01e66fdb340}{Servo}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}PWMHandle, uint32\+\_\+t channel)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_servo}{Servo} constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servo_ab220ecf228ea7b008227f21a64f06024}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the \doxylink{class_servo}{Servo} object and starts PWM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servo_a92f16edba5d71a28c9c2e4c6c5a85d8b}{set\+Angle}} (uint32\+\_\+t position\+\_\+deg, uint16\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Set the position of the \doxylink{class_servo}{Servo} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servo_a57e27f3e31877fda1cd1cfdc51f9ffd7}{update\+\_\+servo\+\_\+flag}} ()
+\begin{DoxyCompactList}\small\item\em Update the servo flag. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_servo_aac6ead4264d2a4321ddf25e31f812b48}{start\+Timer}} (uint16\+\_\+t delay)
+\begin{DoxyCompactList}\small\item\em Starts a timer. \end{DoxyCompactList}\item 
+\Hypertarget{class_servo_ab6ca9274cd0d77b6a98b9f0fffb5959e}\label{class_servo_ab6ca9274cd0d77b6a98b9f0fffb5959e} 
+float {\bfseries elapsed\+Time} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_servo_a8593401c137d84d5b7441ee1170a5e56}\label{class_servo_a8593401c137d84d5b7441ee1170a5e56} 
+float {\bfseries min\+\_\+pulse} = 0.\+5
+\item 
+\Hypertarget{class_servo_a56f97e404808990417678465edad6f4d}\label{class_servo_a56f97e404808990417678465edad6f4d} 
+float {\bfseries max\+\_\+pulse} = 2.\+5
+\item 
+\Hypertarget{class_servo_a8d3931e53fc29e85863aee341c24ee57}\label{class_servo_a8d3931e53fc29e85863aee341c24ee57} 
+uint16\+\_\+t {\bfseries max\+\_\+rot} = 180
+\item 
+\Hypertarget{class_servo_a519f0bf4bc63061fefc1463c8875f063}\label{class_servo_a519f0bf4bc63061fefc1463c8875f063} 
+uint16\+\_\+t {\bfseries flag}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_servo_a90cd628aa942214457b8c01e66fdb340}\label{class_servo_a90cd628aa942214457b8c01e66fdb340} 
+\index{Servo@{Servo}!Servo@{Servo}}
+\index{Servo@{Servo}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{Servo()}{Servo()}}
+{\footnotesize\ttfamily Servo\+::\+Servo (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{PWMHandle,  }\item[{uint32\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_servo}{Servo} constructor. 
+
+\begin{DoxyAuthor}{Author}
+Miles Alderman 
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em PWMHandle} & Handler for PWM \\
+\hline
+{\em channel} & Channel for the timer \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_servo_ab220ecf228ea7b008227f21a64f06024}\label{class_servo_ab220ecf228ea7b008227f21a64f06024} 
+\index{Servo@{Servo}!initialize@{initialize}}
+\index{initialize@{initialize}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily void Servo\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the \doxylink{class_servo}{Servo} object and starts PWM. 
+
+\Hypertarget{class_servo_a92f16edba5d71a28c9c2e4c6c5a85d8b}\label{class_servo_a92f16edba5d71a28c9c2e4c6c5a85d8b} 
+\index{Servo@{Servo}!setAngle@{setAngle}}
+\index{setAngle@{setAngle}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{setAngle()}{setAngle()}}
+{\footnotesize\ttfamily void Servo\+::set\+Angle (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{position\+\_\+deg,  }\item[{uint16\+\_\+t}]{delay }\end{DoxyParamCaption})}
+
+
+
+Set the position of the \doxylink{class_servo}{Servo} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position\+\_\+deg} & Desired position in degrees \\
+\hline
+{\em delay} & Delay in milliseconds before the servo starts moving \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servo_aac6ead4264d2a4321ddf25e31f812b48}\label{class_servo_aac6ead4264d2a4321ddf25e31f812b48} 
+\index{Servo@{Servo}!startTimer@{startTimer}}
+\index{startTimer@{startTimer}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{startTimer()}{startTimer()}}
+{\footnotesize\ttfamily void Servo\+::start\+Timer (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{delay }\end{DoxyParamCaption})}
+
+
+
+Starts a timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & Delay in milliseconds for the timer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_servo_a57e27f3e31877fda1cd1cfdc51f9ffd7}\label{class_servo_a57e27f3e31877fda1cd1cfdc51f9ffd7} 
+\index{Servo@{Servo}!update\_servo\_flag@{update\_servo\_flag}}
+\index{update\_servo\_flag@{update\_servo\_flag}!Servo@{Servo}}
+\doxysubsubsection{\texorpdfstring{update\_servo\_flag()}{update\_servo\_flag()}}
+{\footnotesize\ttfamily void Servo\+::update\+\_\+servo\+\_\+flag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update the servo flag. 
+
+Decrements the flag if it\textquotesingle{}s greater than 0. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/milesalderman/\+STM32\+Cube\+IDE/workspace\+\_\+4.\+20/\+HH\+\_\+\+ROBOT/\+Core/\+Inc/servo\+\_\+driver.\+h\item 
+/\+Users/milesalderman/\+STM32\+Cube\+IDE/workspace\+\_\+4.\+20/\+HH\+\_\+\+ROBOT/\+Core/\+Src/servo\+\_\+driver.\+cpp\end{DoxyCompactItemize}

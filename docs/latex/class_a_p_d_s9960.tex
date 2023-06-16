@@ -1,0 +1,175 @@
+\doxysection{APDS9960 Class Reference}
+\hypertarget{class_a_p_d_s9960}{}\label{class_a_p_d_s9960}\index{APDS9960@{APDS9960}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_p_d_s9960_a3c4f523518c73ccbb7bc9a25a91116a6}{APDS9960}} (I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}i2c\+Handle, UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}uart\+Handle, uint16\+\_\+t ATIME)
+\begin{DoxyCompactList}\small\item\em \doxylink{class_a_p_d_s9960}{APDS9960} constructor. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_a_p_d_s9960_a179e041fe02bfac073c4a53ad2c607e8}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the \doxylink{class_a_p_d_s9960}{APDS9960} sensor. \end{DoxyCompactList}\item 
+\Hypertarget{class_a_p_d_s9960_a131476462b3506e5d5b4158dd9d05cd2}\label{class_a_p_d_s9960_a131476462b3506e5d5b4158dd9d05cd2} 
+void {\bfseries read\+RGBC} ()
+\begin{DoxyCompactList}\small\item\em Read the RGBC (Red, Green, Blue, Clear) values from the \doxylink{class_a_p_d_s9960}{APDS9960} sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_p_d_s9960_a77335775110bea5d503f0289b806cba2}{ball\+Detect}} ()
+\begin{DoxyCompactList}\small\item\em Sort colors based on RGBC values. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_a_p_d_s9960_ad89d2fcf3a6b4ec6cc04dbda02076a2f}{color\+Sort}} ()
+\begin{DoxyCompactList}\small\item\em Sort colors based on RGBC values. \end{DoxyCompactList}\item 
+\Hypertarget{class_a_p_d_s9960_a5ffde42bc3386c9e242778d249714c21}\label{class_a_p_d_s9960_a5ffde42bc3386c9e242778d249714c21} 
+void {\bfseries color\+Set} ()
+\begin{DoxyCompactList}\small\item\em Set the target color. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{class_a_p_d_s9960_a0ff1afed004110e46dbc6aa0e86c5823}{read\+Reg}} (uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em Read a register from the \doxylink{class_a_p_d_s9960}{APDS9960} sensor. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{class_a_p_d_s9960_a2789db95440452303622ad469b1cbb46}{read\+Reg16}} (uint8\+\_\+t reg)
+\begin{DoxyCompactList}\small\item\em Read a 16-\/bit register from the \doxylink{class_a_p_d_s9960}{APDS9960} sensor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_a_p_d_s9960_ac16182c267cf2e49afe23f11f145228e}{write\+Reg}} (uint8\+\_\+t reg, uint8\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Write a value to a register on the \doxylink{class_a_p_d_s9960}{APDS9960} sensor. \end{DoxyCompactList}\item 
+\Hypertarget{class_a_p_d_s9960_af3546339e900dfcd92d8afe5cddfad6e}\label{class_a_p_d_s9960_af3546339e900dfcd92d8afe5cddfad6e} 
+void {\bfseries print\+RGBCBuffer} ()
+\begin{DoxyCompactList}\small\item\em Print the RGBC buffer values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_p_d_s9960_a14a278e8afc16b63fda6cda5e38f1e81}\label{class_a_p_d_s9960_a14a278e8afc16b63fda6cda5e38f1e81} 
+char {\bfseries ball\+\_\+color} \mbox{[}13\mbox{]}
+\item 
+\Hypertarget{class_a_p_d_s9960_aad22017a931c5f98e64dfe02ed0d66e1}\label{class_a_p_d_s9960_aad22017a931c5f98e64dfe02ed0d66e1} 
+uint16\+\_\+t {\bfseries RGBC\+\_\+\+Buffer} \mbox{[}4\mbox{]} = \{0, 0, 0, 0\}
+\item 
+\Hypertarget{class_a_p_d_s9960_a84e271d7f03664d2de9e3b4dbc5be062}\label{class_a_p_d_s9960_a84e271d7f03664d2de9e3b4dbc5be062} 
+uint16\+\_\+t {\bfseries RGBC\+\_\+\+Select} \mbox{[}4\mbox{]} = \{0, 0, 0, 0\}
+\item 
+\Hypertarget{class_a_p_d_s9960_acf59bc01531a7965742aa5260b95500f}\label{class_a_p_d_s9960_acf59bc01531a7965742aa5260b95500f} 
+uint8\+\_\+t {\bfseries RGB\+\_\+\+Margin}
+\item 
+\Hypertarget{class_a_p_d_s9960_a83faf7e56da42e23492e12c844cf9222}\label{class_a_p_d_s9960_a83faf7e56da42e23492e12c844cf9222} 
+uint16\+\_\+t {\bfseries ATIME}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_a_p_d_s9960_a72ca847dd3420238dd230711d0153a9e}\label{class_a_p_d_s9960_a72ca847dd3420238dd230711d0153a9e} 
+static const uint8\+\_\+t {\bfseries APDS9960\+\_\+\+I2\+C\+\_\+\+ADDR} = 0x72
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_p_d_s9960_a3c4f523518c73ccbb7bc9a25a91116a6}\label{class_a_p_d_s9960_a3c4f523518c73ccbb7bc9a25a91116a6} 
+\index{APDS9960@{APDS9960}!APDS9960@{APDS9960}}
+\index{APDS9960@{APDS9960}!APDS9960@{APDS9960}}
+\doxysubsubsection{\texorpdfstring{APDS9960()}{APDS9960()}}
+{\footnotesize\ttfamily APDS9960\+::\+APDS9960 (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{i2c\+Handle,  }\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{uart\+Handle,  }\item[{uint16\+\_\+t}]{Atime }\end{DoxyParamCaption})}
+
+
+
+\doxylink{class_a_p_d_s9960}{APDS9960} constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i2c\+Handle} & I2C handler \\
+\hline
+{\em uart\+Handle} & UART handler \\
+\hline
+{\em Atime} & Integration time for photodiode \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_p_d_s9960_a77335775110bea5d503f0289b806cba2}\label{class_a_p_d_s9960_a77335775110bea5d503f0289b806cba2} 
+\index{APDS9960@{APDS9960}!ballDetect@{ballDetect}}
+\index{ballDetect@{ballDetect}!APDS9960@{APDS9960}}
+\doxysubsubsection{\texorpdfstring{ballDetect()}{ballDetect()}}
+{\footnotesize\ttfamily bool APDS9960\+::ball\+Detect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sort colors based on RGBC values. 
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if the color is within the target range, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_a_p_d_s9960_ad89d2fcf3a6b4ec6cc04dbda02076a2f}\label{class_a_p_d_s9960_ad89d2fcf3a6b4ec6cc04dbda02076a2f} 
+\index{APDS9960@{APDS9960}!colorSort@{colorSort}}
+\index{colorSort@{colorSort}!APDS9960@{APDS9960}}
+\doxysubsubsection{\texorpdfstring{colorSort()}{colorSort()}}
+{\footnotesize\ttfamily bool APDS9960\+::color\+Sort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sort colors based on RGBC values. 
+
+\begin{DoxyReturn}{Returns}
+bool Returns true if the color is within the target range, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_a_p_d_s9960_a179e041fe02bfac073c4a53ad2c607e8}\label{class_a_p_d_s9960_a179e041fe02bfac073c4a53ad2c607e8} 
+\index{APDS9960@{APDS9960}!initialize@{initialize}}
+\index{initialize@{initialize}!APDS9960@{APDS9960}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily uint8\+\_\+t APDS9960\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the \doxylink{class_a_p_d_s9960}{APDS9960} sensor. 
+
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t Returns 1 if initialization is successful, 0 otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_a_p_d_s9960_a0ff1afed004110e46dbc6aa0e86c5823}\label{class_a_p_d_s9960_a0ff1afed004110e46dbc6aa0e86c5823} 
+\index{APDS9960@{APDS9960}!readReg@{readReg}}
+\index{readReg@{readReg}!APDS9960@{APDS9960}}
+\doxysubsubsection{\texorpdfstring{readReg()}{readReg()}}
+{\footnotesize\ttfamily uint8\+\_\+t APDS9960\+::read\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
+
+
+
+Read a register from the \doxylink{class_a_p_d_s9960}{APDS9960} sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Register to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint8\+\_\+t The value read from the register 
+\end{DoxyReturn}
+\Hypertarget{class_a_p_d_s9960_a2789db95440452303622ad469b1cbb46}\label{class_a_p_d_s9960_a2789db95440452303622ad469b1cbb46} 
+\index{APDS9960@{APDS9960}!readReg16@{readReg16}}
+\index{readReg16@{readReg16}!APDS9960@{APDS9960}}
+\doxysubsubsection{\texorpdfstring{readReg16()}{readReg16()}}
+{\footnotesize\ttfamily uint16\+\_\+t APDS9960\+::read\+Reg16 (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
+
+
+
+Read a 16-\/bit register from the \doxylink{class_a_p_d_s9960}{APDS9960} sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Register to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t The value read from the register 
+\end{DoxyReturn}
+\Hypertarget{class_a_p_d_s9960_ac16182c267cf2e49afe23f11f145228e}\label{class_a_p_d_s9960_ac16182c267cf2e49afe23f11f145228e} 
+\index{APDS9960@{APDS9960}!writeReg@{writeReg}}
+\index{writeReg@{writeReg}!APDS9960@{APDS9960}}
+\doxysubsubsection{\texorpdfstring{writeReg()}{writeReg()}}
+{\footnotesize\ttfamily void APDS9960\+::write\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Write a value to a register on the \doxylink{class_a_p_d_s9960}{APDS9960} sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em reg} & Register to write to \\
+\hline
+{\em value} & Value to write to the register \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/milesalderman/\+STM32\+Cube\+IDE/workspace\+\_\+4.\+20/\+HH\+\_\+\+ROBOT/\+Core/\+Inc/apds9960.\+h\item 
+/\+Users/milesalderman/\+STM32\+Cube\+IDE/workspace\+\_\+4.\+20/\+HH\+\_\+\+ROBOT/\+Core/\+Src/apds9960.\+cpp\end{DoxyCompactItemize}

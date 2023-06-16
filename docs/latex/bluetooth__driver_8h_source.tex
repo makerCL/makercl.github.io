@@ -1,0 +1,30 @@
+\doxysection{bluetooth\+\_\+driver.\+h}
+\hypertarget{bluetooth__driver_8h_source}{}\label{bluetooth__driver_8h_source}\index{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/bluetooth\_driver.h@{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/bluetooth\_driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ bluetooth\_driver.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ May\ 23,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ johna}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_BLUETOOTH\_DRIVER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_BLUETOOTH\_DRIVER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structblue__drv}{blue\_drv}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ \ \ \ status;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{char}\ \ \ \ \ \ \ \ \ \ \ \ cur\_state;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{char}*\ \ \ \ \ \ \ \ \ \ \ blue\_char\_ptr;}
+\DoxyCodeLine{00018\ \}\ \mbox{\hyperlink{structblue__drv}{blue\_drv\_t}};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ updateStatus(\mbox{\hyperlink{structblue__drv}{blue\_drv\_t}}*\ \mbox{\hyperlink{structblue__drv}{blue\_drv}});}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ print\_Blue(\mbox{\hyperlink{structblue__drv}{blue\_drv\_t}}*\ \mbox{\hyperlink{structblue__drv}{blue\_drv}},\ UART\_HandleTypeDef*\ huart);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_BLUETOOTH\_DRIVER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

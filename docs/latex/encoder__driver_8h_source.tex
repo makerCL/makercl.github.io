@@ -1,0 +1,47 @@
+\doxysection{encoder\+\_\+driver.\+h}
+\hypertarget{encoder__driver_8h_source}{}\label{encoder__driver_8h_source}\index{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/encoder\_driver.h@{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/encoder\_driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ encoder\_driver.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jun\ 2,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ johna}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_ENCODER\_DRIVER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_ENCODER\_DRIVER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structencoder__drv}{encoder\_drv}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ TOTAL\_COUNT;}
+\DoxyCodeLine{00016\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ LAST\_COUNT;}
+\DoxyCodeLine{00017\ \ \ \ \ uint8\_t\ \ \ \ \ \ \ \ \ \ \ \ \ LAST\_ENCODER\_COUNT;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ GPIO\_Pin1;}
+\DoxyCodeLine{00020\ \ \ \ \ GPIO\_TypeDef*\ \ \ \ \ \ \ GPIOx1;}
+\DoxyCodeLine{00021\ \ \ \ \ uint16\_t\ \ \ \ \ \ \ \ \ \ \ \ GPIO\_Pin2;}
+\DoxyCodeLine{00022\ \ \ \ \ GPIO\_TypeDef*\ \ \ \ \ \ \ GPIOx2;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ TPR;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ \ \ \ \ \ \ pos;}
+\DoxyCodeLine{00026\ \}\ \mbox{\hyperlink{structencoder__drv}{encoder\_drv\_t}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \mbox{\hyperlink{structencoder__drv}{encoder\_drv\_t}}\ init\_encoder(uint16\_t\ \ \ \ GPIO\_Pin1,\ GPIO\_TypeDef*\ GPIOx1,\ uint16\_t\ GPIO\_Pin2,\ GPIO\_TypeDef*\ GPIOx2,\ int32\_t\ TPR);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keywordtype}{void}\ update\_encoder(\mbox{\hyperlink{structencoder__drv}{encoder\_drv\_t}}*\ \mbox{\hyperlink{structencoder__drv}{encoder\_drv}});}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{comment}{//void\ print\_encoder(encoder\_drv\_t*\ encoder\_drv);}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ Update\_Encoder\_State(\mbox{\hyperlink{structencoder__drv}{encoder\_drv\_t}}*\ \mbox{\hyperlink{structencoder__drv}{encoder\_drv}});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ zero(\mbox{\hyperlink{structencoder__drv}{encoder\_drv\_t}}*\ \mbox{\hyperlink{structencoder__drv}{encoder\_drv}});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ uint8\_t\ NewState(\mbox{\hyperlink{structencoder__drv}{encoder\_drv\_t}}*\ \mbox{\hyperlink{structencoder__drv}{encoder\_drv}});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_ENCODER\_DRIVER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

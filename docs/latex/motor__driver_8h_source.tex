@@ -1,0 +1,39 @@
+\doxysection{motor\+\_\+driver.\+h}
+\hypertarget{motor__driver_8h_source}{}\label{motor__driver_8h_source}\index{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/motor\_driver.h@{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Inc/motor\_driver.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ motor\_driver.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ \ Created\ on:\ May\ 23,\ 2023}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ johna}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ INC\_MOTOR\_DRIVER\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ INC\_MOTOR\_DRIVER\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}stdint.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structmotor__drv}{motor\_drv}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ int32\_t\ \ \ \ \ \ \ \ \ \ \ \ \ pulse;}
+\DoxyCodeLine{00016\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ chan\_1;}
+\DoxyCodeLine{00017\ \ \ \ \ uint32\_t\ \ \ \ \ \ \ \ \ \ \ \ chan\_2;}
+\DoxyCodeLine{00018\ \ \ \ \ TIM\_HandleTypeDef*\ \ htim;}
+\DoxyCodeLine{00019\ \}\ \mbox{\hyperlink{structmotor__drv}{motor\_drv\_t}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ enable(\mbox{\hyperlink{structmotor__drv}{motor\_drv\_t}}*\ \mbox{\hyperlink{structmotor__drv}{motor\_drv}});}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ disable(\mbox{\hyperlink{structmotor__drv}{motor\_drv\_t}}*\ \mbox{\hyperlink{structmotor__drv}{motor\_drv}});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ scaleNewPulse(\mbox{\hyperlink{structmotor__drv}{motor\_drv\_t}}*\ \mbox{\hyperlink{structmotor__drv}{motor\_drv}},\ int8\_t\ val\_8);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ NewPulse(\mbox{\hyperlink{structmotor__drv}{motor\_drv\_t}}*\ \mbox{\hyperlink{structmotor__drv}{motor\_drv}},\ int32\_t\ val\_32);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ setPWM(\mbox{\hyperlink{structmotor__drv}{motor\_drv\_t}}*\ \mbox{\hyperlink{structmotor__drv}{motor\_drv}});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_MOTOR\_DRIVER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

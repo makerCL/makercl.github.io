@@ -1,0 +1,368 @@
+\doxysection{/\+Users/milesalderman/\+STM32\+Cube\+IDE/workspace\+\_\+4.20/\+HH\+\_\+\+ROBOT/\+Core/\+Src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Src/main.cpp@{/Users/milesalderman/STM32CubeIDE/workspace\_4.20/HH\_ROBOT/Core/Src/main.cpp}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include \"{}main.\+h\"{}}\newline
+{\ttfamily \#include \"{}string.\+h\"{}}\newline
+{\ttfamily \#include \"{}apds9960.\+h\"{}}\newline
+{\ttfamily \#include \"{}servo\+\_\+driver.\+h\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \"{}motor\+\_\+driver.\+h\"{}}\newline
+{\ttfamily \#include \"{}bluetooth\+\_\+driver.\+h\"{}}\newline
+{\ttfamily \#include \"{}line\+\_\+driver.\+h\"{}}\newline
+{\ttfamily \#include \"{}encoder\+\_\+driver.\+h\"{}}\newline
+{\ttfamily \#include \"{}navigation.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a4e8e0168b899fd075f9abe4f0062285d}{usrprint}} (const char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Transmit a string message via UART interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a481cd49b1bd618876eefc1e00148c2bf}{usrprint}} (uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Transmit a uint32\+\_\+t value via UART interface. \end{DoxyCompactList}\item 
+\Hypertarget{main_8cpp_a901923b6b57ab9810cc56eddbf287e11}\label{main_8cpp_a901923b6b57ab9810cc56eddbf287e11} 
+void {\bfseries MASTERMIND\+\_\+\+TASK} ()
+\begin{DoxyCompactList}\small\item\em The mastermind task. Mastermind manages other tasks. \end{DoxyCompactList}\item 
+\Hypertarget{main_8cpp_ab64e003d86943cd106c9ef7ef443641b}\label{main_8cpp_ab64e003d86943cd106c9ef7ef443641b} 
+void {\bfseries NAV\+\_\+\+TASK} ()
+\begin{DoxyCompactList}\small\item\em Navigation task controls the desired position of robot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a8ad6227d40d713ac795795fec2aab248}{CORRAL\+\_\+\+TASK}} (\mbox{\hyperlink{class_servo}{Servo}} \&SERVO\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em Tasks for the Corral module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a96d814398624223168669fd4945f82e8}{MOTOR\+\_\+\+TASK}} (\mbox{\hyperlink{structmotor__drv}{motor\+\_\+drv\+\_\+t}} \texorpdfstring{$\ast$}{*}motor1, \mbox{\hyperlink{structmotor__drv}{motor\+\_\+drv\+\_\+t}} \texorpdfstring{$\ast$}{*}motor2, \mbox{\hyperlink{structmotor__drv}{motor\+\_\+drv\+\_\+t}} \texorpdfstring{$\ast$}{*}motor3)
+\begin{DoxyCompactList}\small\item\em Tasks for the Motor module. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_add7e44a41b130d594878a496474fcc89}{SORT\+\_\+\+TASK}} (\mbox{\hyperlink{class_a_p_d_s9960}{APDS9960}} \&RGB\+\_\+obj, \mbox{\hyperlink{class_servo}{Servo}} \&SERVO\+\_\+obj)
+\begin{DoxyCompactList}\small\item\em Sorts colelcted balls. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a97a4049050d23d7e7a777c88a12c34f2}{usrprint}} (const char \texorpdfstring{$\ast$}{*}message, uint32\+\_\+t value)
+\begin{DoxyCompactList}\small\item\em Transmit a formatted string via UART interface. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ae494a9643f29b87d6d81e5264e60e57b}{HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\begin{DoxyCompactList}\small\item\em Rx Transfer completed callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em Period elapsed callback in non-\/blocking mode. Callback\+: timer has rolled over. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a0cd91fd3a9608559c2a87a8ba6cba55f}{HAL\+\_\+\+GPIO\+\_\+\+EXTI\+\_\+\+Callback}} (uint16\+\_\+t GPIO\+\_\+\+Pin)
+\begin{DoxyCompactList}\small\item\em EXTI line detection callback. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_a22b804736f5648d52f639b2647d4ed13}\label{main_8cpp_a22b804736f5648d52f639b2647d4ed13} 
+ADC\+\_\+\+Handle\+Type\+Def {\bfseries hadc1}
+\item 
+\Hypertarget{main_8cpp_a972864c4dd026c29e959bafad74da4a7}\label{main_8cpp_a972864c4dd026c29e959bafad74da4a7} 
+I2\+C\+\_\+\+Handle\+Type\+Def {\bfseries hi2c1}
+\item 
+\Hypertarget{main_8cpp_a25fc663547539bc49fecc0011bd76ab5}\label{main_8cpp_a25fc663547539bc49fecc0011bd76ab5} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim1}
+\item 
+\Hypertarget{main_8cpp_a2c80fd5510e2990a59a5c90d745c716c}\label{main_8cpp_a2c80fd5510e2990a59a5c90d745c716c} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim2}
+\item 
+\Hypertarget{main_8cpp_aac3d2c59ee0e3bbae1b99529a154eb62}\label{main_8cpp_aac3d2c59ee0e3bbae1b99529a154eb62} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim3}
+\item 
+\Hypertarget{main_8cpp_a9ea8e3ff1bea74bf72edfc06d2c98529}\label{main_8cpp_a9ea8e3ff1bea74bf72edfc06d2c98529} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim4}
+\item 
+\Hypertarget{main_8cpp_a31f6f787777409af5ed0d131b52b7988}\label{main_8cpp_a31f6f787777409af5ed0d131b52b7988} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim9}
+\item 
+\Hypertarget{main_8cpp_a3c386e4f1937c518c1beccddef92045e}\label{main_8cpp_a3c386e4f1937c518c1beccddef92045e} 
+TIM\+\_\+\+Handle\+Type\+Def {\bfseries htim10}
+\item 
+\Hypertarget{main_8cpp_a2cf715bef37f7e8ef385a30974a5f0d5}\label{main_8cpp_a2cf715bef37f7e8ef385a30974a5f0d5} 
+UART\+\_\+\+Handle\+Type\+Def {\bfseries huart1}
+\item 
+\Hypertarget{main_8cpp_a38905dda1d2fbff006c69db48eddba9d}\label{main_8cpp_a38905dda1d2fbff006c69db48eddba9d} 
+UART\+\_\+\+Handle\+Type\+Def {\bfseries huart6}
+\item 
+\Hypertarget{main_8cpp_a5d0f8dae4c374158288f24073277d761}\label{main_8cpp_a5d0f8dae4c374158288f24073277d761} 
+uint8\+\_\+t {\bfseries sort\+\_\+flg} = 1
+\item 
+\Hypertarget{main_8cpp_abfb114acf1427cc2b1cfcf4e16f3de5f}\label{main_8cpp_abfb114acf1427cc2b1cfcf4e16f3de5f} 
+uint8\+\_\+t {\bfseries corral\+\_\+flg} = 1
+\item 
+\Hypertarget{main_8cpp_a01e9592b0451080d8a0c5c258d46c147}\label{main_8cpp_a01e9592b0451080d8a0c5c258d46c147} 
+uint8\+\_\+t {\bfseries nav\+\_\+flg} = 1
+\item 
+\Hypertarget{main_8cpp_a4ab7453ca320af1d5047ac4003776428}\label{main_8cpp_a4ab7453ca320af1d5047ac4003776428} 
+uint8\+\_\+t {\bfseries nav\+\_\+2\+\_\+flg} = 1
+\item 
+\Hypertarget{main_8cpp_affb8c4384064bb2f9207b82bf2e01e8b}\label{main_8cpp_affb8c4384064bb2f9207b82bf2e01e8b} 
+char {\bfseries char\+\_\+in}
+\item 
+\Hypertarget{main_8cpp_ab53d9307d24bf065426e651094f66386}\label{main_8cpp_ab53d9307d24bf065426e651094f66386} 
+char {\bfseries blue\+\_\+char}
+\item 
+\Hypertarget{main_8cpp_ac45163870d9484d6674d44c53cc3f480}\label{main_8cpp_ac45163870d9484d6674d44c53cc3f480} 
+double {\bfseries PathL}
+\item 
+\Hypertarget{main_8cpp_aac838adb25a26538213e75878e687c5c}\label{main_8cpp_aac838adb25a26538213e75878e687c5c} 
+\mbox{\hyperlink{structblue__drv}{blue\+\_\+drv\+\_\+t}} {\bfseries blue1} = \{\textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, \&blue\+\_\+char\}
+\item 
+\Hypertarget{main_8cpp_a3be2cb8f138618c94164fe13a4b5cd4c}\label{main_8cpp_a3be2cb8f138618c94164fe13a4b5cd4c} 
+\mbox{\hyperlink{structline__drv}{line\+\_\+drv\+\_\+t}} {\bfseries lineR} = \{\textquotesingle{}0\textquotesingle{}, GPIOB, RIGHT\+\_\+\+LINE\+\_\+\+OUT\+\_\+\+Pin\}
+\item 
+\Hypertarget{main_8cpp_a64f34562b1c40b8eb2dde748fe9ab36b}\label{main_8cpp_a64f34562b1c40b8eb2dde748fe9ab36b} 
+\mbox{\hyperlink{structline__drv}{line\+\_\+drv\+\_\+t}} {\bfseries lineL} = \{\textquotesingle{}0\textquotesingle{}, GPIOB, LEFT\+\_\+\+LINE\+\_\+\+OUT\+\_\+\+Pin\}
+\item 
+\Hypertarget{main_8cpp_a5e1668ebe52f4e2590b587a54a6f0d15}\label{main_8cpp_a5e1668ebe52f4e2590b587a54a6f0d15} 
+\mbox{\hyperlink{structmotor__drv}{motor\+\_\+drv\+\_\+t}} {\bfseries motor1} = \{0, TIM\+\_\+\+CHANNEL\+\_\+2, TIM\+\_\+\+CHANNEL\+\_\+1,\&htim2\}
+\item 
+\Hypertarget{main_8cpp_a60ad597c3873cb9fe021ac3fd0b0f47f}\label{main_8cpp_a60ad597c3873cb9fe021ac3fd0b0f47f} 
+\mbox{\hyperlink{structmotor__drv}{motor\+\_\+drv\+\_\+t}} {\bfseries motor2} = \{0, TIM\+\_\+\+CHANNEL\+\_\+2, TIM\+\_\+\+CHANNEL\+\_\+1,\&htim1\}
+\item 
+\Hypertarget{main_8cpp_a267f0641c7d17a58f3966cacd61a817e}\label{main_8cpp_a267f0641c7d17a58f3966cacd61a817e} 
+\mbox{\hyperlink{structmotor__drv}{motor\+\_\+drv\+\_\+t}} {\bfseries motor3} = \{-\/1000, TIM\+\_\+\+CHANNEL\+\_\+2, TIM\+\_\+\+CHANNEL\+\_\+1,\&htim3\}
+\item 
+\Hypertarget{main_8cpp_aa38f38f360231e4be471544d13155833}\label{main_8cpp_aa38f38f360231e4be471544d13155833} 
+\mbox{\hyperlink{structencoder__drv}{encoder\+\_\+drv\+\_\+t}} {\bfseries encoder1} = init\+\_\+encoder(M1\+\_\+\+OUTA\+\_\+\+Pin, GPIOA, M1\+\_\+\+OUTB\+\_\+\+Pin, GPIOA, 64\texorpdfstring{$\ast$}{*}50)
+\item 
+\Hypertarget{main_8cpp_a807b2b8c1a83d5de13fd2338d03a0b01}\label{main_8cpp_a807b2b8c1a83d5de13fd2338d03a0b01} 
+\mbox{\hyperlink{structencoder__drv}{encoder\+\_\+drv\+\_\+t}} {\bfseries encoder2} = init\+\_\+encoder(M2\+\_\+\+OUTA\+\_\+\+Pin, GPIOB, M2\+\_\+\+OUTB\+\_\+\+Pin, GPIOB, 64\texorpdfstring{$\ast$}{*}50)
+\item 
+\Hypertarget{main_8cpp_a9cccfb136c90f1ea2e2b00067cb95d9f}\label{main_8cpp_a9cccfb136c90f1ea2e2b00067cb95d9f} 
+\mbox{\hyperlink{struct_p_i_d__drv}{PID\+\_\+drv\+\_\+t}} {\bfseries PID1} = \{0, 0, 0, 20, 0, 0, 17\}
+\item 
+\Hypertarget{main_8cpp_a315512958450a3f3780453fc025cb2b1}\label{main_8cpp_a315512958450a3f3780453fc025cb2b1} 
+\mbox{\hyperlink{struct_p_i_d__drv}{PID\+\_\+drv\+\_\+t}} {\bfseries PID2} = \{0, 0, 0, 20, 0, 0, 17\}
+\item 
+\Hypertarget{main_8cpp_a57fd14a5e402f30d5f30f8cb1d981b52}\label{main_8cpp_a57fd14a5e402f30d5f30f8cb1d981b52} 
+double {\bfseries y\+\_\+start} = 36
+\item 
+\Hypertarget{main_8cpp_ab22fb07c0ff6a0604d25f107a7adb364}\label{main_8cpp_ab22fb07c0ff6a0604d25f107a7adb364} 
+\mbox{\hyperlink{structworld__drv}{world\+\_\+drv\+\_\+t}} {\bfseries world} = \{0,-\/y\+\_\+start,90,5, (int16\+\_\+t)y\+\_\+start, 0, -\/y\+\_\+start,37000/720,6400/11\}
+\item 
+\Hypertarget{main_8cpp_ac5afb05ab6131b56b5de7c1134c27d69}\label{main_8cpp_ac5afb05ab6131b56b5de7c1134c27d69} 
+\mbox{\hyperlink{structnav__drv}{nav\+\_\+drv\+\_\+t}} {\bfseries nav} = \{\&motor1,\&motor2,\&encoder1,\&encoder2,\&PID1,\&PID2,\&world,0\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\begin{DoxyAuthor}{Author}
+Miles Alderman 
+
+John Bennett Copyright (c) 2023 STMicroelectronics. All rights reserved.
+\end{DoxyAuthor}
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a8ad6227d40d713ac795795fec2aab248}\label{main_8cpp_a8ad6227d40d713ac795795fec2aab248} 
+\index{main.cpp@{main.cpp}!CORRAL\_TASK@{CORRAL\_TASK}}
+\index{CORRAL\_TASK@{CORRAL\_TASK}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{CORRAL\_TASK()}{CORRAL\_TASK()}}
+{\footnotesize\ttfamily void CORRAL\+\_\+\+TASK (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_servo}{Servo}} \&}]{SERVO\+\_\+obj }\end{DoxyParamCaption})}
+
+
+
+Tasks for the Corral module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em SERVO\+\_\+obj} & \doxylink{class_servo}{Servo} object associated with the corral. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_a1730ffe1e560465665eb47d9264826f9}\label{main_8cpp_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.cpp@{main.cpp}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8cpp_a0cd91fd3a9608559c2a87a8ba6cba55f}\label{main_8cpp_a0cd91fd3a9608559c2a87a8ba6cba55f} 
+\index{main.cpp@{main.cpp}!HAL\_GPIO\_EXTI\_Callback@{HAL\_GPIO\_EXTI\_Callback}}
+\index{HAL\_GPIO\_EXTI\_Callback@{HAL\_GPIO\_EXTI\_Callback}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{HAL\_GPIO\_EXTI\_Callback()}{HAL\_GPIO\_EXTI\_Callback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+GPIO\+\_\+\+EXTI\+\_\+\+Callback (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{GPIO\+\_\+\+Pin }\end{DoxyParamCaption})}
+
+
+
+EXTI line detection callback. 
+
+Used for updating line followers and updating encoders on every rising and falling edge.
+
+
+\begin{DoxyParams}{Parameters}
+{\em GPIO\+\_\+\+Pin} & Specifies the port pin connected to corresponding EXTI line. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_a8a3b0ad512a6e6c6157440b68d395eac}\label{main_8cpp_a8a3b0ad512a6e6c6157440b68d395eac} 
+\index{main.cpp@{main.cpp}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
+\index{HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_PeriodElapsedCallback()}{HAL\_TIM\_PeriodElapsedCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim }\end{DoxyParamCaption})}
+
+
+
+Period elapsed callback in non-\/blocking mode. Callback\+: timer has rolled over. 
+
+This function is used to keep track of when timers overflow. We have two timers that cause interrupt triggers a second and a millisecond timer This timer is used for printing not as quickly updating operation states and flags. As well as keeping track of the state of the deadman switch.
+
+
+\begin{DoxyParams}{Parameters}
+{\em htim} & TIM handle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_ae494a9643f29b87d6d81e5264e60e57b}\label{main_8cpp_ae494a9643f29b87d6d81e5264e60e57b} 
+\index{main.cpp@{main.cpp}!HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}}
+\index{HAL\_UART\_RxCpltCallback@{HAL\_UART\_RxCpltCallback}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_RxCpltCallback()}{HAL\_UART\_RxCpltCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart }\end{DoxyParamCaption})}
+
+
+
+Rx Transfer completed callback. 
+
+This function is used to recreate a uart transfer interrupt for both uarts\+: huart1 and huart6 Check which version of the UART triggered this callback
+
+
+\begin{DoxyParams}{Parameters}
+{\em huart} & UART handle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+The application entry point. 
+\begin{DoxyRetVals}{Return values}
+{\em int} & Return code \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8cpp_a96d814398624223168669fd4945f82e8}\label{main_8cpp_a96d814398624223168669fd4945f82e8} 
+\index{main.cpp@{main.cpp}!MOTOR\_TASK@{MOTOR\_TASK}}
+\index{MOTOR\_TASK@{MOTOR\_TASK}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_TASK()}{MOTOR\_TASK()}}
+{\footnotesize\ttfamily void MOTOR\+\_\+\+TASK (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmotor__drv}{motor\+\_\+drv\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{motor1,  }\item[{\mbox{\hyperlink{structmotor__drv}{motor\+\_\+drv\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{motor2,  }\item[{\mbox{\hyperlink{structmotor__drv}{motor\+\_\+drv\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{motor3 }\end{DoxyParamCaption})}
+
+
+
+Tasks for the Motor module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em motor1} & First motor object. \\
+\hline
+{\em motor2} & Second motor object. \\
+\hline
+{\em motor3} & Third motor object. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_add7e44a41b130d594878a496474fcc89}\label{main_8cpp_add7e44a41b130d594878a496474fcc89} 
+\index{main.cpp@{main.cpp}!SORT\_TASK@{SORT\_TASK}}
+\index{SORT\_TASK@{SORT\_TASK}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SORT\_TASK()}{SORT\_TASK()}}
+{\footnotesize\ttfamily void SORT\+\_\+\+TASK (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_a_p_d_s9960}{APDS9960}} \&}]{RGB\+\_\+obj,  }\item[{\mbox{\hyperlink{class_servo}{Servo}} \&}]{SERVO\+\_\+obj }\end{DoxyParamCaption})}
+
+
+
+Sorts colelcted balls. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em RGB\+\_\+obj} & RGB sensor object. \\
+\hline
+{\em SERVO\+\_\+obj} & \doxylink{class_servo}{Servo} object associated with the sort module. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_a70af21c671abfcc773614a9a4f63d920}\label{main_8cpp_a70af21c671abfcc773614a9a4f63d920} 
+\index{main.cpp@{main.cpp}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks\Hypertarget{main_8cpp_a4e8e0168b899fd075f9abe4f0062285d}\label{main_8cpp_a4e8e0168b899fd075f9abe4f0062285d} 
+\index{main.cpp@{main.cpp}!usrprint@{usrprint}}
+\index{usrprint@{usrprint}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{usrprint()}{usrprint()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void usrprint (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message }\end{DoxyParamCaption})}
+
+
+
+Transmit a string message via UART interface. 
+
+This function appends a line terminator (\"{}\textbackslash{}r\textbackslash{}n\"{}) to the string and sends it via the UART interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Null-\/terminated string to transmit. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_a97a4049050d23d7e7a777c88a12c34f2}\label{main_8cpp_a97a4049050d23d7e7a777c88a12c34f2} 
+\index{main.cpp@{main.cpp}!usrprint@{usrprint}}
+\index{usrprint@{usrprint}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{usrprint()}{usrprint()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void usrprint (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{message,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Transmit a formatted string via UART interface. 
+
+This function formats a string using a provided format and a uint32\+\_\+t value. The formatted string is then sent via the UART interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & A format string for sprintf. \\
+\hline
+{\em value} & The uint32\+\_\+t value to be used with the format string. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8cpp_a481cd49b1bd618876eefc1e00148c2bf}\label{main_8cpp_a481cd49b1bd618876eefc1e00148c2bf} 
+\index{main.cpp@{main.cpp}!usrprint@{usrprint}}
+\index{usrprint@{usrprint}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{usrprint()}{usrprint()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void usrprint (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Transmit a uint32\+\_\+t value via UART interface. 
+
+This function converts the uint32\+\_\+t value to string and sends it via the UART interface.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The uint32\+\_\+t value to transmit. \\
+\hline
+\end{DoxyParams}
